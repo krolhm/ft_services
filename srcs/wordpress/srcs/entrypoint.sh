@@ -41,9 +41,11 @@ else
     wp user create author       author@ftservices.com      --role=author       --user_pass=author123
     wp user create contributor  contributor@ftservices.com --role=contributor  --user_pass=contributor123
     wp user create subscriber   subscriber@ftservices.com  --role=subscriber   --user_pass=subscriber123
-    # wp theme install twentytwentyone
-    # wp theme activate twentytwentyone
-    # wp option update blogdescription "I HATE REVERSE PROXY"
+    wp theme install rebalance
+    wp theme activate rebalance
+    wp menu create "42"
+    wp menu create "ft_services"
+    wp menu create "rbourgea"
 fi
 
 mkdir -p /etc/telegraf
