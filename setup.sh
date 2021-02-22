@@ -29,7 +29,7 @@ fi
 
 echo -e "${GREEN}\n########################  EXTERNAL IP SETUP #########################\n${RESET}"
 
-export EXTERNAL_IP=`minikube ip`
+export EXTERNAL_IP=172.17.0.2
 
 envsubst '$EXTERNAL_IP' < srcs/yaml/configmaps/metallb_configmap.yaml           > srcs/yaml/metallb_configmap.yaml
 envsubst '$EXTERNAL_IP' < srcs/yaml/configmaps/wp_db_configmap.yaml             > srcs/yaml/wp_db_configmap.yaml
